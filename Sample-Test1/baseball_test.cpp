@@ -15,7 +15,6 @@ public:
 		
 		}
 	}
-
 };
 
 TEST_F(BaseballFixture, ThrowExceptionWhenInvalidCase) {
