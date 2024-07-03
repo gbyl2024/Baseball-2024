@@ -22,8 +22,18 @@ public:
 		}
 
 		int strikes = getStrikeNumber(guessNumber);
+		int ballsCount = 0;
 
-		return { false, strikes, 0 };
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (i == j)continue;
+				if (guessNumber[i] == question[j]) {
+					ballsCount++;
+				}
+			}
+		}
+
+		return { false, strikes, ballsCount };
 	}
 
 	int getStrikeNumber(const std::string& guessNumber) {
